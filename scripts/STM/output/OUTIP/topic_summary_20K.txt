@@ -1,0 +1,123 @@
+=== Mean Topic Proportions (K = 20, OUTIP) ===
+Topic 14: 0.0998 (9.98%)
+Topic 15: 0.0776 (7.76%)
+Topic 11: 0.0721 (7.21%)
+Topic 19: 0.0713 (7.13%)
+Topic  3: 0.0650 (6.50%)
+Topic 12: 0.0587 (5.87%)
+Topic  7: 0.0577 (5.77%)
+Topic  2: 0.0557 (5.57%)
+Topic  9: 0.0556 (5.56%)
+Topic 18: 0.0511 (5.11%)
+Topic  6: 0.0457 (4.57%)
+Topic 17: 0.0423 (4.23%)
+Topic  8: 0.0382 (3.82%)
+Topic  5: 0.0349 (3.49%)
+Topic 10: 0.0336 (3.36%)
+Topic  1: 0.0330 (3.30%)
+Topic 13: 0.0321 (3.21%)
+Topic 16: 0.0304 (3.04%)
+Topic  4: 0.0245 (2.45%)
+Topic 20: 0.0206 (2.06%)
+
+=== Top 10 Words per Topic ===
+Topic 1 Top Words:
+ 	 Highest Prob: basic, need, cover, leisur, obtain, state, well, satisfi, roof, capac 
+ 	 FREX: need, cover, basic, satisfi, unforeseen, event, obtain, cultur, state, leisur 
+ 	 Lift: cover, cultur, enslav, event, lazi, need, satisfi, unforeseen, basic, six 
+ 	 Score: basic, need, cover, lazi, satisfi, leisur, event, state, roof, unforeseen 
+Topic 2 Top Words:
+ 	 Highest Prob: econom, situat, stabil, person, secur, social, uncertainti, level, futur, support 
+ 	 FREX: econom, secur, stabil, social, develop, uncertainti, emot, support, person, level 
+ 	 Lift: academ, develop, emot, profess, awar, correct, individu, prospect, uneas, econom 
+ 	 Score: econom, stabil, secur, situat, social, uncertainti, person, uneas, develop, support 
+Topic 3 Top Words:
+ 	 Highest Prob: live, enough, money, current, standard, let, give, just, digniti, comfort 
+ 	 FREX: enough, live, standard, money, surviv, digniti, current, comfort, proper, just 
+ 	 Lift: contrast, standard, surviv, enough, live, struggl, money, digniti, proper, rentingbuy 
+ 	 Score: live, enough, money, standard, digniti, current, contrast, just, surviv, comfort 
+Topic 4 Top Words:
+ 	 Highest Prob: decent, good, despit, relat, exampl, tax, abus, sector, qualifi, desir 
+ 	 FREX: decent, good, abus, optim, despit, unjust, relat, exagger, slaveri, desir 
+ 	 Lift: exagger, slaveri, unjust, optim, decent, good, equival, construct, modern, abus 
+ 	 Score: decent, good, slaveri, despit, tax, relat, abus, exampl, qualifi, intern 
+Topic 5 Top Words:
+ 	 Highest Prob: time, food, rise, enjoy, due, free, servic, activ, part, order 
+ 	 FREX: free, devot, food, enjoy, due, transport, essenti, rise, activ, forward 
+ 	 Lift: free, gas, depriv, devot, forward, greater, holder, medicin, replac, twice 
+ 	 Score: food, rise, time, free, depriv, enjoy, electr, devot, due, essenti 
+Topic 6 Top Words:
+ 	 Highest Prob: peopl, young, difficulti, right, opportun, take, experi, start, mani, think 
+ 	 FREX: peopl, experi, difficulti, young, right, advantag, fact, opportun, labour, take 
+ 	 Lift: advantag, experi, gain, inhuman, tremend, trust, useless, peopl, difficulti, chanc 
+ 	 Score: peopl, young, experi, difficulti, opportun, right, take, inhuman, advantag, mani 
+Topic 7 Top Words:
+ 	 Highest Prob: salari, low, high, cost, possibl, far, defici, administr, harsh, safe 
+ 	 FREX: low, salari, high, defici, far, harsh, possibl, cost, safe, administr 
+ 	 Lift: defici, harsh, low, salari, far, high, safe, possibl, cost, mass 
+ 	 Score: low, salari, high, defici, cost, possibl, far, safe, harsh, administr 
+Topic 8 Top Words:
+ 	 Highest Prob: will, know, whether, year, think, sinc, can, anoth, noth, never 
+ 	 FREX: know, will, never, tomorrow, differ, civil, whether, noth, now, thousand 
+ 	 Lift: bit, certainti, exam, examin, seen, substitut, sunday, villag, know, answer 
+ 	 Score: will, know, recognis, whether, now, tomorrow, never, next, differ, civil 
+Topic 9 Top Words:
+ 	 Highest Prob: condit, bad, paid, schedul, worker, respect, hard, poor, work, undignifi 
+ 	 FREX: bad, undignifi, respect, condit, worker, atmospher, paid, hard, schedul, speak 
+ 	 Lift: atmospher, accompani, bad, predict, safeti, undignifi, vari, speak, respect, diet 
+ 	 Score: bad, condit, paid, schedul, worker, respect, predict, poor, hard, atmospher 
+Topic 10 Top Words:
+ 	 Highest Prob: expens, etc, life, feel, reach, meet, can, employ, precari, term 
+ 	 FREX: expens, peac, meet, affect, etc, decid, worri, trip, reach, term 
+ 	 Lift: decid, helpless, various, peac, fragil, indefinit, manifest, practis, dinner, deeper 
+ 	 Score: expens, decid, meet, etc, term, feel, reach, peac, affect, worri 
+Topic 11 Top Words:
+ 	 Highest Prob: abl, independ, becom, home, afford, without, famili, parent, even, acquir 
+ 	 FREX: independ, abl, afford, becom, home, form, acquir, famili, singl, without 
+ 	 Lift: cushion, anim, form, singl, hobbi, regardless, independ, emigr, afford, abl 
+ 	 Score: abl, independ, becom, home, afford, cushion, famili, without, acquir, form 
+Topic 12 Top Words:
+ 	 Highest Prob: make, month, end, pay, even, anyth, eat, bare, well, fulltim 
+ 	 FREX: end, month, make, pay, anyth, treatment, payment, though, debt, eat 
+ 	 Lift: drown, end, impoverish, loan, none, penni, represent, ruin, unit, debt 
+ 	 Score: month, end, make, treatment, pay, even, eat, bare, mortgag, bill 
+Topic 13 Top Words:
+ 	 Highest Prob: imposs, thing, futur, like, complic, subsist, consid, treat, look, even 
+ 	 FREX: subsist, complic, imposs, thing, societi, oneself, like, fit, seem, longterm 
+ 	 Lift: fend, miseri, prefer, anyon, circl, declin, subsist, vision, selfsuffici, longterm 
+ 	 Score: imposs, subsist, vision, thing, like, complic, look, oneself, futur, plan 
+Topic 14 Top Words:
+ 	 Highest Prob: work, hour, earn, littl, day, mani, lot, less, balanc, worklif 
+ 	 FREX: littl, hour, worklif, balanc, lot, earn, work, extra, establish, day 
+ 	 Lift: afternoon, charg, defenceless, mallorca, legal, establish, worklif, extra, balanc, littl 
+ 	 Score: work, hour, littl, earn, mani, defenceless, day, lot, worklif, balanc 
+Topic 15 Top Words:
+ 	 Highest Prob: life, lack, resourc, allow, incom, instabl, qualiti, mean, someth, suffici 
+ 	 FREX: resourc, lack, incom, instabl, qualiti, poverti, allow, necessari, life, lead 
+ 	 Lift: freedom, lifestyl, poverti, resourc, monetari, quantiti, regard, autonomi, primari, incom 
+ 	 Score: lack, resourc, instabl, incom, life, allow, suffici, insecur, qualiti, quantiti 
+Topic 16 Top Words:
+ 	 Highest Prob: get, much, line, effort, respons, time, better, also, offer, compani 
+ 	 FREX: get, line, better, effort, much, dedic, ahead, consequ, valu, respons 
+ 	 Lift: agre, ahead, consequ, specif, stranger, worst, born, exclus, fed, heavi 
+ 	 Score: consequ, get, much, effort, respons, line, valu, better, compens, match 
+Topic 17 Top Words:
+ 	 Highest Prob: contract, temporari, without, perman, remuner, post, unstabl, shift, fear, overtim 
+ 	 FREX: contract, temporari, unstabl, dismiss, unpaid, parttim, perman, overtim, durat, remuner 
+ 	 Lift: trial, actual, book, contract, durat, explan, ill, intermitt, nonexist, notic 
+ 	 Score: contract, temporari, perman, dismiss, unstabl, truli, remuner, shift, overtim, post 
+Topic 18 Top Words:
+ 	 Highest Prob: job, find, studi, train, stabl, demand, well, want, option, lower 
+ 	 FREX: find, wellpaid, job, train, studi, qualif, option, demand, combin, stabl 
+ 	 Lift: interest, focus, wellpaid, impact, precis, loss, found, mother, otherwis, compli 
+ 	 Score: job, find, studi, train, focus, demand, stabl, option, lower, hire 
+Topic 19 Top Words:
+ 	 Highest Prob: hous, rent, access, price, buy, save, flat, everyth, year, share 
+ 	 FREX: buy, shop, access, hous, rent, old, basket, flat, price, purchas 
+ 	 Lift: unafford, believ, capitalist, everywher, exponenti, frozen, inherit, ownership, pension, psoe 
+ 	 Score: hous, buy, price, rent, access, surround, save, flat, everyth, shop 
+Topic 20 Top Words:
+ 	 Highest Prob: minimum, one, way, wage, week, leav, even, dread, forc, happi 
+ 	 FREX: minimum, wage, happi, way, one, dread, morn, leav, week, rude 
+ 	 Lift: happi, morn, rude, smi, minimum, wage, unaccept, dread, unthink, lowest 
+ 	 Score: minimum, happi, one, wage, way, leav, week, dread, morn, rude 

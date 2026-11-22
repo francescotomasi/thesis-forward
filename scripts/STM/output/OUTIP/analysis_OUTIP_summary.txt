@@ -1,0 +1,812 @@
+stm v1.3.8 successfully loaded. See ?stm for help. 
+ Papers, resources, and other materials at structuraltopicmodel.com
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ forcats   1.0.0     ✔ readr     2.1.5
+✔ lubridate 1.9.4     ✔ stringr   1.5.1
+✔ purrr     1.0.4     ✔ tibble    3.2.1
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:lubridate’:
+
+    hour, isoweek, isoyear, mday, minute, month, quarter, second, wday,
+    week, yday, year
+
+The following object is masked from ‘package:purrr’:
+
+    transpose
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+Package version: 4.3.1
+Unicode version: 14.0
+ICU version: 71.1
+Parallel computing: disabled
+See https://quanteda.io for tutorials and examples.
+
+Attaching package: ‘Matrix’
+
+The following objects are masked from ‘package:tidyr’:
+
+    expand, pack, unpack
+
+Loading required package: carData
+
+Attaching package: ‘car’
+
+The following object is masked from ‘package:purrr’:
+
+    some
+
+The following object is masked from ‘package:dplyr’:
+
+    recode
+
+Type 'citation("pROC")' for a citation.
+
+Attaching package: ‘pROC’
+
+The following objects are masked from ‘package:stats’:
+
+    cov, smooth, var
+
+Loaded OUTIP dataset: 2450 rows x 57 cols
+
+=== Mean Cosine Similarity (OUTIP) ===
+[1] 0.07154245
+
+=== Top 20 TF-IDF Terms (OUTIP) ===
+    work      abl     live   salari      job     hous     life   condit 
+489.4647 465.1716 414.4233 413.0526 390.5185 333.0702 331.4797 309.8860 
+     bad     lack     make    month      low   decent independ   enough 
+276.5100 267.5259 262.9640 253.9701 245.4352 236.1255 230.3957 229.0387 
+    even    basic      pay      end 
+227.9126 227.5202 219.3858 218.5416 
+
+=== Frequency of Predicted Emotions (OUTIP) ===
+# A tibble: 24 × 4
+   emotion         freq    perc perc_label
+   <chr>          <int>   <dbl> <chr>     
+ 1 disappointment   984 40.2    40.2%     
+ 2 neutral          752 30.7    30.7%     
+ 3 disapproval      661 27.0    27%       
+ 4 annoyance        404 16.5    16.5%     
+ 5 realization      241  9.84   9.8%      
+ 6 sadness          118  4.82   4.8%      
+ 7 nervousness       92  3.76   3.8%      
+ 8 disgust           90  3.67   3.7%      
+ 9 approval          67  2.73   2.7%      
+10 confusion         57  2.33   2.3%      
+11 anger             46  1.88   1.9%      
+12 curiosity         34  1.39   1.4%      
+13 fear              28  1.14   1.1%      
+14 admiration        25  1.02   1%        
+15 joy               10  0.408  0.4%      
+16 caring             9  0.367  0.4%      
+17 desire             7  0.286  0.3%      
+18 optimism           5  0.204  0.2%      
+19 excitement         3  0.122  0.1%      
+20 gratitude          3  0.122  0.1%      
+21 remorse            3  0.122  0.1%      
+22 embarrassment      2  0.0816 0.1%      
+23 love               2  0.0816 0.1%      
+24 pride              2  0.0816 0.1%      
+
+=== Logit: Subjective Precarity ~ VAD (OUTIP) ===
+
+Call:
+glm(formula = dum_prec ~ factor(V_dum) + factor(A_dum) + factor(D_dum), 
+    family = binomial, data = data)
+
+Coefficients:
+               Estimate Std. Error z value Pr(>|z|)    
+(Intercept)    -1.29154    0.06540 -19.748  < 2e-16 ***
+factor(V_dum)1  0.04667    0.17306   0.270 0.787409    
+factor(A_dum)1  0.33844    0.09633   3.513 0.000442 ***
+factor(D_dum)1  0.16074    0.13999   1.148 0.250896    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 2727.6  on 2449  degrees of freedom
+Residual deviance: 2712.7  on 2446  degrees of freedom
+AIC: 2720.7
+
+Number of Fisher Scoring iterations: 4
+
+
+=== Logit: Subjective Precarity ~ VAD + actinct (OUTIP) ===
+
+Call:
+glm(formula = dum_prec ~ factor(V_dum) + factor(A_dum) + factor(D_dum) + 
+    factor(actinct), family = binomial, data = data)
+
+Coefficients:
+                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      -1.08120    0.10320 -10.477  < 2e-16 ***
+factor(V_dum)1    0.05703    0.17336   0.329 0.742162    
+factor(A_dum)1    0.34221    0.09651   3.546 0.000391 ***
+factor(D_dum)1    0.16929    0.14021   1.207 0.227287    
+factor(actinct)1 -0.28460    0.10871  -2.618 0.008849 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 2724.3  on 2447  degrees of freedom
+Residual deviance: 2702.5  on 2443  degrees of freedom
+  (2 observations deleted due to missingness)
+AIC: 2712.5
+
+Number of Fisher Scoring iterations: 4
+
+
+=== Chi-Square: OUTIP vars x V_dum ===
+# A tibble: 2 × 5
+  statistic p.value parameter method                                       var  
+      <dbl>   <dbl>     <int> <chr>                                        <chr>
+1     0.651  0.420          1 Pearson's Chi-squared test with Yates' cont… dum_…
+2     3.05   0.0808         1 Pearson's Chi-squared test with Yates' cont… acti…
+
+=== Chi-Square: OUTIP vars x A_dum ===
+# A tibble: 2 × 5
+  statistic  p.value parameter method                                      var  
+      <dbl>    <dbl>     <int> <chr>                                       <chr>
+1  12.4     0.000432         1 Pearson's Chi-squared test with Yates' con… dum_…
+2   0.00839 0.927            1 Pearson's Chi-squared test with Yates' con… acti…
+
+=== Chi-Square: OUTIP vars x D_dum ===
+# A tibble: 2 × 5
+  statistic p.value parameter method                                       var  
+      <dbl>   <dbl>     <int> <chr>                                        <chr>
+1      2.52   0.112         1 Pearson's Chi-squared test with Yates' cont… dum_…
+2      2.65   0.104         1 Pearson's Chi-squared test with Yates' cont… acti…
+
+=== Sentiment Group Counts (OUTIP) ===
+# A tibble: 4 × 2
+  sentiment_group     n
+  <fct>           <int>
+1 Neutral           752
+2 Positive          203
+3 Negative         1336
+4 Ambivalent        159
+
+=== Neutrality Paradox Models (OUTIP) ===
+
+Call:
+glm(formula = dum_prec ~ factor(sentiment_group), family = binomial, 
+    data = data)
+
+Coefficients:
+                                  Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                       -1.12719    0.08483 -13.288   <2e-16 ***
+factor(sentiment_group)Positive    0.13731    0.17926   0.766   0.4437    
+factor(sentiment_group)Negative   -0.06967    0.10675  -0.653   0.5140    
+factor(sentiment_group)Ambivalent  0.37688    0.18990   1.985   0.0472 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 2727.6  on 2449  degrees of freedom
+Residual deviance: 2721.0  on 2446  degrees of freedom
+AIC: 2729
+
+Number of Fisher Scoring iterations: 4
+
+
+Call:
+glm(formula = dum_prec ~ factor(sentg_dum), family = binomial, 
+    data = data)
+
+Coefficients:
+                    Estimate Std. Error z value Pr(>|z|)    
+(Intercept)        -1.127186   0.084825 -13.288   <2e-16 ***
+factor(sentg_dum)1  0.001694   0.101878   0.017    0.987    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 2727.6  on 2449  degrees of freedom
+Residual deviance: 2727.6  on 2448  degrees of freedom
+AIC: 2731.6
+
+Number of Fisher Scoring iterations: 4
+
+
+Call:
+glm(formula = sentg_dum ~ factor(actinct), family = binomial, 
+    data = data)
+
+Coefficients:
+                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)       0.84136    0.09202   9.143   <2e-16 ***
+factor(actinct)1 -0.03388    0.10465  -0.324    0.746    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 3018.4  on 2447  degrees of freedom
+Residual deviance: 3018.3  on 2446  degrees of freedom
+  (2 observations deleted due to missingness)
+AIC: 3022.3
+
+Number of Fisher Scoring iterations: 4
+
+
+================ SADNESS vs STM Topics (OUTIP) ================
+Positive cases (sadness_pred == 1): 118 / 2450
+# A tibble: 10 × 5
+   Topic    Pred_0 Pred_1 Difference Likelihood_Ratio
+   <chr>     <dbl>  <dbl>      <dbl>            <dbl>
+ 1 Topic_9  0.0508 0.151     0.0998             2.96 
+ 2 Topic_14 0.0984 0.127     0.0290             1.29 
+ 3 Topic_7  0.0572 0.0681    0.0109             1.19 
+ 4 Topic_12 0.0586 0.0621    0.00350            1.06 
+ 5 Topic_18 0.0510 0.0539    0.00286            1.06 
+ 6 Topic_20 0.0205 0.0219    0.00141            1.07 
+ 7 Topic_4  0.0244 0.0257    0.00133            1.05 
+ 8 Topic_3  0.0652 0.0630   -0.00218            0.967
+ 9 Topic_6  0.0459 0.0422   -0.00363            0.921
+10 Topic_16 0.0308 0.0237   -0.00705            0.771
+
+Top 1 topic: Topic_9 | Top 3 topics: Topic_9, Topic_14, Topic_7
+
+-- Linear Regression (Top 1 Topic) --
+
+Call:
+lm(formula = f_lm, data = df_in)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.64841 -0.04905 -0.02386 -0.01000  0.99752 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.002663   0.005248  -0.508    0.612    
+Topic_9      0.913758   0.058314  15.670   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2042 on 2448 degrees of freedom
+Multiple R-squared:  0.09116,	Adjusted R-squared:  0.09079 
+F-statistic: 245.5 on 1 and 2448 DF,  p-value: < 2.2e-16
+
+
+-- Wilcoxon Rank-Sum Test --
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Topic_9 by sadness_pred
+W = 78675, p-value = 3.898e-15
+alternative hypothesis: true location shift is not equal to 0
+
+
+-- Point-Biserial Correlation --
+
+	Pearson's product-moment correlation
+
+data:  df_in[[top1]] and as.numeric(df_in[[emotion_col]])
+t = 15.67, df = 2448, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.2654977 0.3374897
+sample estimates:
+      cor 
+0.3019241 
+
+
+-- Logistic Regression (Top 3 Topics) --
+
+Call:
+glm(formula = f_logit3, family = binomial, data = df_in)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -3.6683     0.2329 -15.750   <2e-16 ***
+Topic_9      10.9215     1.0995   9.934   <2e-16 ***
+Topic_14     -3.1296     1.6027  -1.953   0.0509 .  
+Topic_7       1.5355     2.9066   0.528   0.5973    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 946.05  on 2449  degrees of freedom
+Residual deviance: 817.10  on 2446  degrees of freedom
+AIC: 825.1
+
+Number of Fisher Scoring iterations: 6
+
+
+-- Effect Size & Predictive Power Comparison --
+     Metric Top1_Topic Top3_Combined
+1 Cohen's d -1.4785538    -0.9525038
+2       AUC  0.7140921     0.6984112
+
+================ DISAPPOINTMENT vs STM Topics (OUTIP) ================
+Positive cases (disappointment_pred == 1): 984 / 2450
+# A tibble: 10 × 5
+   Topic    Pred_0 Pred_1 Difference Likelihood_Ratio
+   <chr>     <dbl>  <dbl>      <dbl>            <dbl>
+ 1 Topic_9  0.0392 0.0802  0.0410               2.05 
+ 2 Topic_14 0.0917 0.112   0.0202               1.22 
+ 3 Topic_7  0.0534 0.0640  0.0106               1.20 
+ 4 Topic_12 0.0558 0.0631  0.00733              1.13 
+ 5 Topic_18 0.0498 0.0531  0.00337              1.07 
+ 6 Topic_4  0.0236 0.0258  0.00221              1.09 
+ 7 Topic_20 0.0206 0.0206  0.0000828            1.00 
+ 8 Topic_16 0.0309 0.0297 -0.00125              0.960
+ 9 Topic_15 0.0781 0.0768 -0.00128              0.984
+10 Topic_17 0.0435 0.0405 -0.00301              0.931
+
+Top 1 topic: Topic_9 | Top 3 topics: Topic_9, Topic_14, Topic_7
+
+-- Linear Regression (Top 1 Topic) --
+
+Call:
+lm(formula = f_lm, data = df_in)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.0800 -0.3592 -0.3147  0.5916  0.7030 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.29211    0.01208   24.17   <2e-16 ***
+Topic_9      1.96903    0.13428   14.66   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4702 on 2448 degrees of freedom
+Multiple R-squared:  0.08075,	Adjusted R-squared:  0.08037 
+F-statistic:   215 on 1 and 2448 DF,  p-value: < 2.2e-16
+
+
+-- Wilcoxon Rank-Sum Test --
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Topic_9 by disappointment_pred
+W = 558032, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+-- Point-Biserial Correlation --
+
+	Pearson's product-moment correlation
+
+data:  df_in[[top1]] and as.numeric(df_in[[emotion_col]])
+t = 14.664, df = 2448, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.2473403 0.3201559
+sample estimates:
+      cor 
+0.2841578 
+
+
+-- Logistic Regression (Top 3 Topics) --
+
+Call:
+glm(formula = f_logit3, family = binomial, data = df_in)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -0.9863     0.0902 -10.934   <2e-16 ***
+Topic_9      10.7098     1.0257  10.441   <2e-16 ***
+Topic_14     -1.8072     0.6393  -2.827   0.0047 ** 
+Topic_7       3.2860     1.3306   2.470   0.0135 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 3301  on 2449  degrees of freedom
+Residual deviance: 3075  on 2446  degrees of freedom
+AIC: 3083
+
+Number of Fisher Scoring iterations: 4
+
+
+-- Effect Size & Predictive Power Comparison --
+     Metric Top1_Topic Top3_Combined
+1 Cohen's d -0.6043185    -0.4930179
+2       AUC  0.6131612     0.6120014
+
+================ DISAPPROVAL vs STM Topics (OUTIP) ================
+Positive cases (disapproval_pred == 1): 661 / 2450
+# A tibble: 10 × 5
+   Topic    Pred_0 Pred_1 Difference Likelihood_Ratio
+   <chr>     <dbl>  <dbl>      <dbl>            <dbl>
+ 1 Topic_9  0.0489 0.0737    0.0248              1.51
+ 2 Topic_15 0.0744 0.0862    0.0118              1.16
+ 3 Topic_3  0.0620 0.0733    0.0113              1.18
+ 4 Topic_7  0.0564 0.0611    0.00474             1.08
+ 5 Topic_2  0.0547 0.0585    0.00373             1.07
+ 6 Topic_18 0.0502 0.0537    0.00346             1.07
+ 7 Topic_4  0.0237 0.0266    0.00294             1.12
+ 8 Topic_1  0.0323 0.0350    0.00277             1.09
+ 9 Topic_14 0.0990 0.102     0.00267             1.03
+10 Topic_20 0.0202 0.0217    0.00147             1.07
+
+Top 1 topic: Topic_9 | Top 3 topics: Topic_9, Topic_15, Topic_3
+
+-- Linear Regression (Top 1 Topic) --
+
+Call:
+lm(formula = f_lm, data = df_in)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.9114 -0.2569 -0.2324  0.5393  0.7813 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.21546    0.01127  19.114  < 2e-16 ***
+Topic_9      0.97676    0.12526   7.798 9.22e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4386 on 2448 degrees of freedom
+Multiple R-squared:  0.02424,	Adjusted R-squared:  0.02384 
+F-statistic: 60.81 on 1 and 2448 DF,  p-value: 9.223e-15
+
+
+-- Wilcoxon Rank-Sum Test --
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Topic_9 by disapproval_pred
+W = 478408, p-value = 3.824e-13
+alternative hypothesis: true location shift is not equal to 0
+
+
+-- Point-Biserial Correlation --
+
+	Pearson's product-moment correlation
+
+data:  df_in[[top1]] and as.numeric(df_in[[emotion_col]])
+t = 7.7981, df = 2448, p-value = 9.223e-15
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.1168076 0.1940924
+sample estimates:
+      cor 
+0.1556882 
+
+
+-- Logistic Regression (Top 3 Topics) --
+
+Call:
+glm(formula = f_logit3, family = binomial, data = df_in)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.0975     0.1191 -17.611  < 2e-16 ***
+Topic_9       5.7053     0.6365   8.963  < 2e-16 ***
+Topic_15      2.1819     0.6230   3.502 0.000461 ***
+Topic_3       8.6908     1.1726   7.412 1.25e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 2857.0  on 2449  degrees of freedom
+Residual deviance: 2729.3  on 2446  degrees of freedom
+AIC: 2737.3
+
+Number of Fisher Scoring iterations: 4
+
+
+-- Effect Size & Predictive Power Comparison --
+     Metric Top1_Topic Top3_Combined
+1 Cohen's d -0.3549498    -0.4745599
+2       AUC  0.5954361     0.6408887
+
+================ NEUTRAL vs STM Topics (OUTIP) ================
+Positive cases (neutral_pred == 1): 752 / 2450
+# A tibble: 10 × 5
+   Topic    Pred_0 Pred_1 Difference Likelihood_Ratio
+   <chr>     <dbl>  <dbl>      <dbl>            <dbl>
+ 1 Topic_1  0.0297 0.0406    0.0109              1.37
+ 2 Topic_5  0.0316 0.0422    0.0106              1.33
+ 3 Topic_19 0.0683 0.0780    0.00962             1.14
+ 4 Topic_11 0.0698 0.0772    0.00730             1.10
+ 5 Topic_15 0.0754 0.0824    0.00700             1.09
+ 6 Topic_2  0.0537 0.0604    0.00677             1.13
+ 7 Topic_13 0.0309 0.0349    0.00395             1.13
+ 8 Topic_10 0.0324 0.0363    0.00387             1.12
+ 9 Topic_3  0.0645 0.0663    0.00174             1.03
+10 Topic_17 0.0419 0.0432    0.00128             1.03
+
+Top 1 topic: Topic_1 | Top 3 topics: Topic_1, Topic_5, Topic_19
+
+-- Linear Regression (Top 1 Topic) --
+
+Call:
+lm(formula = f_lm, data = df_in)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.7276 -0.2983 -0.2892  0.6886  0.7172 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.28105    0.01086  25.889  < 2e-16 ***
+Topic_1      0.78388    0.17051   4.597  4.5e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4594 on 2448 degrees of freedom
+Multiple R-squared:  0.008559,	Adjusted R-squared:  0.008154 
+F-statistic: 21.13 on 1 and 2448 DF,  p-value: 4.501e-06
+
+
+-- Wilcoxon Rank-Sum Test --
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Topic_1 by neutral_pred
+W = 517831, p-value = 8.096e-14
+alternative hypothesis: true location shift is not equal to 0
+
+
+-- Point-Biserial Correlation --
+
+	Pearson's product-moment correlation
+
+data:  df_in[[top1]] and as.numeric(df_in[[emotion_col]])
+t = 4.5971, df = 2448, p-value = 4.501e-06
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.05310958 0.13163433
+sample estimates:
+      cor 
+0.0925158 
+
+
+-- Logistic Regression (Top 3 Topics) --
+
+Call:
+glm(formula = f_logit3, family = binomial, data = df_in)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -1.16115    0.07284 -15.942  < 2e-16 ***
+Topic_1      2.52400    0.80060   3.153  0.00162 ** 
+Topic_5      4.62553    1.18877   3.891 9.98e-05 ***
+Topic_19     1.26285    0.63571   1.987  0.04698 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 3021.5  on 2449  degrees of freedom
+Residual deviance: 2974.9  on 2446  degrees of freedom
+AIC: 2982.9
+
+Number of Fisher Scoring iterations: 4
+
+
+-- Effect Size & Predictive Power Comparison --
+     Metric Top1_Topic Top3_Combined
+1 Cohen's d -0.2013694    -0.2869121
+2       AUC  0.5944611     0.5823011
+
+================ FEAR vs STM Topics (OUTIP) ================
+Positive cases (fear_pred == 1): 28 / 2450
+# A tibble: 10 × 5
+   Topic    Pred_0 Pred_1 Difference Likelihood_Ratio
+   <chr>     <dbl>  <dbl>      <dbl>            <dbl>
+ 1 Topic_8  0.0375 0.0952   0.0577              2.54 
+ 2 Topic_17 0.0418 0.0841   0.0422              2.01 
+ 3 Topic_13 0.0320 0.0399   0.00787             1.25 
+ 4 Topic_10 0.0335 0.0411   0.00760             1.23 
+ 5 Topic_16 0.0304 0.0358   0.00544             1.18 
+ 6 Topic_2  0.0557 0.0605   0.00482             1.09 
+ 7 Topic_18 0.0511 0.0544   0.00328             1.06 
+ 8 Topic_19 0.0713 0.0725   0.00122             1.02 
+ 9 Topic_20 0.0206 0.0201  -0.000510            0.975
+10 Topic_15 0.0776 0.0768  -0.000776            0.990
+
+Top 1 topic: Topic_8 | Top 3 topics: Topic_8, Topic_17, Topic_13
+
+-- Linear Regression (Top 1 Topic) --
+
+Call:
+lm(formula = f_lm, data = df_in)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.12904 -0.01028 -0.00874 -0.00767  0.99405 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.005585   0.002478   2.254   0.0243 *  
+Topic_8     0.153094   0.032786   4.669 3.18e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1059 on 2448 degrees of freedom
+Multiple R-squared:  0.008828,	Adjusted R-squared:  0.008423 
+F-statistic:  21.8 on 1 and 2448 DF,  p-value: 3.183e-06
+
+
+-- Wilcoxon Rank-Sum Test --
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Topic_8 by fear_pred
+W = 17962, p-value = 1.832e-05
+alternative hypothesis: true location shift is not equal to 0
+
+
+-- Point-Biserial Correlation --
+
+	Pearson's product-moment correlation
+
+data:  df_in[[top1]] and as.numeric(df_in[[emotion_col]])
+t = 4.6695, df = 2448, p-value = 3.183e-06
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.0545608 0.1330643
+sample estimates:
+       cor 
+0.09395859 
+
+
+-- Logistic Regression (Top 3 Topics) --
+
+Call:
+glm(formula = f_logit3, family = binomial, data = df_in)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -5.2773     0.3063 -17.232  < 2e-16 ***
+Topic_8       5.1692     1.2821   4.032 5.54e-05 ***
+Topic_17      5.0541     1.4983   3.373 0.000743 ***
+Topic_13      6.1492     3.1612   1.945 0.051754 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 306.09  on 2449  degrees of freedom
+Residual deviance: 287.34  on 2446  degrees of freedom
+AIC: 295.34
+
+Number of Fisher Scoring iterations: 7
+
+
+-- Effect Size & Predictive Power Comparison --
+     Metric Top1_Topic Top3_Combined
+1 Cohen's d -0.8875333    -1.0993606
+2       AUC  0.7351363     0.7689778
+
+================ ANGER vs STM Topics (OUTIP) ================
+Positive cases (anger_pred == 1): 46 / 2450
+# A tibble: 10 × 5
+   Topic    Pred_0 Pred_1 Difference Likelihood_Ratio
+   <chr>     <dbl>  <dbl>      <dbl>            <dbl>
+ 1 Topic_9  0.0552 0.0772   0.0219               1.40
+ 2 Topic_17 0.0419 0.0625   0.0206               1.49
+ 3 Topic_14 0.0994 0.119    0.0192               1.19
+ 4 Topic_6  0.0454 0.0637   0.0183               1.40
+ 5 Topic_7  0.0574 0.0720   0.0146               1.25
+ 6 Topic_19 0.0711 0.0805   0.00934              1.13
+ 7 Topic_16 0.0303 0.0381   0.00781              1.26
+ 8 Topic_4  0.0244 0.0304   0.00608              1.25
+ 9 Topic_18 0.0510 0.0566   0.00554              1.11
+10 Topic_8  0.0382 0.0390   0.000813             1.02
+
+Top 1 topic: Topic_9 | Top 3 topics: Topic_9, Topic_17, Topic_14
+
+-- Linear Regression (Top 1 Topic) --
+
+Call:
+lm(formula = f_lm, data = df_in)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.07183 -0.01920 -0.01672 -0.01550  0.98544 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.014283   0.003487   4.096 4.33e-05 ***
+Topic_9     0.080769   0.038742   2.085   0.0372 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1357 on 2448 degrees of freedom
+Multiple R-squared:  0.001772,	Adjusted R-squared:  0.001365 
+F-statistic: 4.346 on 1 and 2448 DF,  p-value: 0.03719
+
+
+-- Wilcoxon Rank-Sum Test --
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Topic_9 by anger_pred
+W = 39596, p-value = 0.0009581
+alternative hypothesis: true location shift is not equal to 0
+
+
+-- Point-Biserial Correlation --
+
+	Pearson's product-moment correlation
+
+data:  df_in[[top1]] and as.numeric(df_in[[emotion_col]])
+t = 2.0848, df = 2448, p-value = 0.03719
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.002502404 0.081563847
+sample estimates:
+       cor 
+0.04209903 
+
+
+-- Logistic Regression (Top 3 Topics) --
+
+Call:
+glm(formula = f_logit3, family = binomial, data = df_in)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)   -4.371      0.258 -16.941   <2e-16 ***
+Topic_9        2.386      1.806   1.321   0.1866    
+Topic_17       2.657      1.534   1.731   0.0834 .  
+Topic_14       1.130      1.818   0.621   0.5343    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 456.85  on 2449  degrees of freedom
+Residual deviance: 450.60  on 2446  degrees of freedom
+AIC: 458.6
+
+Number of Fisher Scoring iterations: 7
+
+
+-- Effect Size & Predictive Power Comparison --
+     Metric Top1_Topic Top3_Combined
+1 Cohen's d -0.3103129    -0.3847046
+2       AUC  0.6419374     0.6140219
+
+=== Word Count Distribution (OUTIP) ===
+# A tibble: 10 × 3
+   bin   frequency percentage
+   <fct>     <int>      <dbl>
+ 1 0-10        921       37.6
+ 2 11-20       690       28.2
+ 3 21-30       334       13.6
+ 4 31-40       177        7.2
+ 5 41-50       102        4.2
+ 6 51-60        60        2.4
+ 7 61-70        43        1.8
+ 8 71-80        27        1.1
+ 9 81-90        12        0.5
+10 >91          84        3.4
+
+All OUTIP figures saved to: output/OUTIP/figures 
